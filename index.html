@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BTC Russia — Crypto Access Guide for Russia</title>
+<meta name="description" content="How to buy cryptocurrency in Russia in 2026. P2P platforms, ruble on-ramps, and the current regulatory landscape.">
+<meta name="keywords" content="buy bitcoin Russia, crypto exchange Russia, P2P crypto RUB, bitcoin Russia legal">
+<meta property="og:title" content="BTC Russia — Crypto Access Guide for Russia">
+<meta property="og:description" content="How to buy cryptocurrency in Russia in 2026. P2P platforms, ruble on-ramps, and the current regulatory landscape.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://btcrussia.io">
+<link rel="canonical" href="https://btcrussia.io">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #111111;
+  --text: #e8e8e8;
+  --text-muted: #888888;
+  --border: #222222;
+  --accent: var(--site-accent, #e8e8e8);
+  --accent-light: var(--site-accent-light, #333333);
+  --accent-dark: var(--site-accent-dark, #cccccc);
+  --max-w: 1080px;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text);
+}
+
+/* --- Nav --- */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10, 10, 10, 0.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.nav-updated {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* --- Hero --- */
+
+.hero {
+  padding: 8rem 1.5rem 5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  max-width: 720px;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+/* --- Content --- */
+
+.content {
+  padding-bottom: 2rem;
+}
+
+.section-wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- Intro --- */
+
+.intro {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.intro-copy {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 640px;
+  line-height: 1.8;
+}
+
+/* --- Section Labels & Titles --- */
+
+.section-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+}
+
+/* --- Comparison / Cards --- */
+
+.comparison {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: #444;
+}
+
+.card-featured {
+  border-left: 3px solid var(--accent);
+}
+
+.card-icon {
+  display: none;
+}
+
+.card-header {
+  margin-bottom: 1.25rem;
+}
+
+.card-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.card-tagline {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.card-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.card-features {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.card-features li {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.card-features li::before {
+  content: '\2014';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+.card-pricing {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding-top: 1rem;
+  margin-bottom: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.card-pricing strong {
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.card-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.65rem 1.5rem;
+  border-radius: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  margin-top: auto;
+}
+
+.card-cta:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* --- Guide --- */
+
+.guide {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.guide-content {
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 640px;
+  font-size: 0.95rem;
+}
+
+.guide-content h3 {
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 2rem 0 0.75rem;
+}
+
+.guide-content h3:first-child {
+  margin-top: 0;
+}
+
+.guide-content p {
+  margin-bottom: 1rem;
+}
+
+/* --- FAQ --- */
+
+.faq {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.25rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+  gap: 1rem;
+}
+
+.faq-q::after {
+  content: '+';
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.faq-q.open::after {
+  content: '\2212';
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-a.open {
+  max-height: 600px;
+  padding-bottom: 1.25rem;
+}
+
+.faq-a p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+/* --- Footer --- */
+
+.footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 3rem 0 2rem;
+}
+
+.footer-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-disc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.footer-links a {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0 2rem;
+}
+
+.footer-bottom p {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 7rem 1.5rem 3.5rem;
+  }
+
+  .intro,
+  .comparison,
+  .guide,
+  .faq {
+    padding: 3.5rem 0;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">BTC Russia</a>
+    <span class="nav-updated">Updated July 2026</span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-title">Cryptocurrency access in Russia</h1>
+    <p class="hero-sub">Crypto platforms available in Russia — P2P ruble on-ramps, regulatory status, and practical access methods.</p>
+  </div>
+</header>
+
+<main class="content">
+  <section class="intro">
+    <div class="section-wrap">
+      <p class="intro-copy">Russia's crypto landscape is complex — the country legalized cryptocurrency as property in 2020 but has restricted its use for payments. International sanctions have limited access to some global exchanges, making P2P platforms and domestic services the primary access points for Russian users.</p>
+    </div>
+  </section>
+
+  <section class="comparison" id="compare">
+    <div class="section-wrap">
+      <span class="section-label">Comparison</span>
+      <h2 class="section-title">Available crypto platforms</h2>
+      <div class="cards">
+        <div class="card card-featured">
+  <span class="card-icon">🔶</span>
+  <div class="card-header">
+    <div class="card-name">Bybit P2P</div>
+    <div class="card-tagline">Popular exchange for Russian users</div>
+  </div>
+  <p class="card-desc">Bybit has become one of the most popular exchanges for Russian users, with an active P2P marketplace supporting ruble payments via Russian banks including Sberbank and Tinkoff.</p>
+  <ul class="card-features">
+    RUB P2P trading,Sberbank and Tinkoff support,SBP (fast transfers),300+ crypto assets,Competitive P2P rates
+  </ul>
+  <div class="card-pricing"><strong>0% fee</strong> on P2P trades</div>
+  <a href="#affiliate-bybit" class="card-cta" target="_blank" rel="noopener nofollow">Visit Bybit</a>
+</div>
+<div class="card">
+  <span class="card-icon">⭕</span>
+  <div class="card-header">
+    <div class="card-name">OKX P2P</div>
+    <div class="card-tagline">Major exchange with RUB support</div>
+  </div>
+  <p class="card-desc">OKX maintains P2P trading with ruble support. High liquidity, verified merchants, and multiple payment options make it a reliable on-ramp for Russian users.</p>
+  <ul class="card-features">
+    RUB P2P trading,Bank transfer support,Verified merchants,Escrow protection,Large spot market
+  </ul>
+  <div class="card-pricing"><strong>0% fee</strong> on P2P trades</div>
+  <a href="#affiliate-okx" class="card-cta" target="_blank" rel="noopener nofollow">Visit OKX</a>
+</div>
+<div class="card">
+  <span class="card-icon">🟠</span>
+  <div class="card-header">
+    <div class="card-name">Garantex</div>
+    <div class="card-tagline">Russia-focused exchange</div>
+  </div>
+  <p class="card-desc">Garantex is a Russia-based exchange that operates within the Russian regulatory framework. Note: Garantex has been sanctioned by OFAC, which limits its utility for international transfers.</p>
+  <ul class="card-features">
+    Ruble deposits and withdrawals,Russia-based operations,P2P and spot trading,Lower KYC requirements,SBP and bank transfer
+  </ul>
+  <div class="card-pricing">Maker <strong>0.10%</strong> / Taker <strong>0.10%</strong></div>
+  <a href="#affiliate-garantex" class="card-cta" target="_blank" rel="noopener nofollow">Visit Garantex</a>
+</div>
+<div class="card">
+  <span class="card-icon">🦄</span>
+  <div class="card-header">
+    <div class="card-name">Uniswap (DEX)</div>
+    <div class="card-tagline">Decentralized, sanctions-resistant</div>
+  </div>
+  <p class="card-desc">Decentralized exchanges operate without centralized control and cannot enforce geographic restrictions. Connect a self-custody wallet and trade directly. No KYC or identity verification required.</p>
+  <ul class="card-features">
+    No geographic restrictions,No KYC required,Self-custody trading,Cannot be sanctioned,Access any ERC-20 token
+  </ul>
+  <div class="card-pricing"><strong>0.3%</strong> swap fee</div>
+  <a href="#affiliate-uniswap" class="card-cta" target="_blank" rel="noopener nofollow">Visit Uniswap</a>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide" id="guide">
+    <div class="section-wrap">
+      <span class="section-label">Guide</span>
+      <h2 class="section-title">Buying crypto in Russia</h2>
+      <div class="guide-content"><h3>Legal status</h3><p>Russia's 'Digital Financial Assets' law (2020) recognizes crypto as property but prohibits using it for payments. Trading and holding are legal. Mining was legalized with tax requirements. The regulatory framework continues to evolve.</p><h3>Sanctions impact</h3><p>Many global exchanges have restricted or exited the Russian market due to international sanctions. Available options are primarily P2P platforms and exchanges that continue to serve Russian users. Always check the current status of platform availability.</p><h3>Ruble on-ramps</h3><p>P2P trading with ruble payments via bank transfer (Sberbank, Tinkoff) remains the most common on-ramp. Some platforms support SBP (Faster Payments System) for instant ruble deposits.</p></div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="section-wrap">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list" id="faq-list"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-name">BTC Russia</span>
+        <p class="footer-disc">BTCRussia.io provides informational content. This is not legal or financial advice. Cryptocurrency regulations and sanctions are subject to change. Comply with all applicable laws.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://sepehr.ai" target="_blank" rel="noopener">sepehr.ai</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 BTC Russia. Some links are affiliate links.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const SITE_CONFIG = {"faqs":[{"q":"Is crypto legal in Russia?","a":"Yes. Russia legalized cryptocurrency as property under the Digital Financial Assets law in 2020. You can legally buy, sell, hold, and mine crypto. However, using crypto for payments within Russia is prohibited."},{"q":"Can I use Binance in Russia?","a":"Binance sold its Russian operations to CommEX in 2023. Russian users should check current availability of global exchanges, as the situation changes frequently due to sanctions and regulatory developments."},{"q":"How do I buy crypto with rubles?","a":"P2P platforms on Bybit and OKX are the most common method. You find a seller, pay via bank transfer (Sberbank, Tinkoff, SBP), and the crypto is released from escrow once payment is confirmed."},{"q":"Are there tax obligations?","a":"Yes. Crypto is treated as property and gains are subject to personal income tax (13% for residents, 30% for non-residents). You must declare crypto holdings and transactions in your tax return."}],"accentColor":"#1d4ed8","accentLight":"#dbeafe","accentDark":"#1e40af","ctaText":""};
+document.addEventListener('DOMContentLoaded', () => {
+  // Set accent color from config
+  if (SITE_CONFIG.accentColor) {
+    document.documentElement.style.setProperty('--site-accent', SITE_CONFIG.accentColor);
+  }
+  if (SITE_CONFIG.accentLight) {
+    document.documentElement.style.setProperty('--site-accent-light', SITE_CONFIG.accentLight);
+  }
+  if (SITE_CONFIG.accentDark) {
+    document.documentElement.style.setProperty('--site-accent-dark', SITE_CONFIG.accentDark);
+  }
+
+  // Build FAQ accordion
+  const faqList = document.getElementById('faq-list');
+  if (SITE_CONFIG.faqs && faqList) {
+    SITE_CONFIG.faqs.forEach(faq => {
+      const item = document.createElement('div');
+      item.className = 'faq-item';
+      item.innerHTML = `
+        <button class="faq-q">${faq.q}</button>
+        <div class="faq-a"><p>${faq.a}</p></div>
+      `;
+      const btn = item.querySelector('.faq-q');
+      const answer = item.querySelector('.faq-a');
+      btn.addEventListener('click', () => {
+        const isOpen = btn.classList.contains('open');
+        // Close all others
+        faqList.querySelectorAll('.faq-q.open').forEach(openBtn => {
+          openBtn.classList.remove('open');
+          openBtn.closest('.faq-item').querySelector('.faq-a').classList.remove('open');
+        });
+        // Toggle current
+        if (!isOpen) {
+          btn.classList.add('open');
+          answer.classList.add('open');
+        }
+      });
+      faqList.appendChild(item);
+    });
+  }
+});
+
+</script>
+</body>
+</html>
